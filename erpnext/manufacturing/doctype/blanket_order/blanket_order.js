@@ -14,6 +14,14 @@ frappe.ui.form.on('Blanket Order', {
 	refresh: function(frm) {
 		erpnext.hide_company();
 		if (frm.doc.customer && frm.doc.docstatus === 1) {
+			frm.add_custom_button(__('Update Items'), function() {
+				erpnext.utils.update_child_items({
+					frm: frm,
+					child_docname: "items",
+					child_doctype: "Blanket Order Item",
+					cannot_add_row: false,
+				})
+			});
 			frm.add_custom_button(__('View Orders'), function() {
 				frappe.set_route('List', 'Sales Order', {blanket_order: frm.doc.name});
 			});
