@@ -13,6 +13,7 @@
   "schedule_date",
   "expected_delivery_date",
   "section_break_5",
+  "internal_note",
   "description",
   "col_break1",
   "image",
@@ -707,11 +708,16 @@
    "fieldtype": "Check",
    "label": "Is Fixed Asset",
    "read_only": 1
+  },
+  {
+   "fieldname": "internal_note",
+   "fieldtype": "Data",
+   "label": "Internal Note"
   }
  ],
  "idx": 1,
  "istable": 1,
- "modified": "2020-04-07 18:35:17.558928",
+ "modified": "2021-04-26 04:20:31.554156",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order Item",
